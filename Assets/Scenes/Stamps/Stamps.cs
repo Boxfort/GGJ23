@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class Stamps : Control
 {
@@ -56,7 +57,7 @@ public partial class Stamps : Control
         GD.Print("Stamping " + stampType + " at " + stampLocation);
 
         // Find out which cards are under the stamp position
-        foreach (Node n in cardsContainer.GetChildren())
+        foreach (Node n in cardsContainer.GetChildren().Reverse())
         {
             if (n is DraggableCard card)
             {

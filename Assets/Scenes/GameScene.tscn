@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dovq6v04t5x5d"]
+[gd_scene load_steps=32 format=3 uid="uid://dovq6v04t5x5d"]
 
 [ext_resource type="PackedScene" uid="uid://bcpkp1yvwi116" path="res://Assets/Scenes/Cards/SuspectCard.tscn" id="1_7ssd4"]
 [ext_resource type="Script" path="res://Assets/Scenes/GameHandler.cs" id="1_cqjm3"]
@@ -27,6 +27,9 @@
 [ext_resource type="AudioStream" uid="uid://bn4ww0wahsfjt" path="res://Assets/Sounds/406243___stubb__typewriter-ding_near_mono.wav" id="23_des0a"]
 [ext_resource type="Script" path="res://Assets/Scenes/TimeLimit.cs" id="24_ccuqm"]
 [ext_resource type="Script" path="res://Assets/Scenes/PointCounter.cs" id="26_ksqov"]
+[ext_resource type="AudioStream" uid="uid://jqfwrs8k3s0n" path="res://Assets/Sounds/242501__gabrielaraujo__powerupsuccess.wav" id="28_m0m88"]
+[ext_resource type="AudioStream" uid="uid://db7meulw2pgg6" path="res://Assets/Sounds/538554__sjonas88__success.wav" id="29_tk42j"]
+[ext_resource type="AudioStream" uid="uid://be1k3u3v230bb" path="res://Assets/Sounds/253174__suntemple__retro-you-lose-sfx.wav" id="30_ej4c1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f1ng"]
 bg_color = Color(1, 1, 1, 1)
@@ -413,3 +416,12 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_fonts/font = ExtResource("21_bfi0r")
 text = "0000000"
+
+[node name="SuccessAudio" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("28_m0m88")
+
+[node name="GoodAudio" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("29_tk42j")
+
+[node name="FailAudio" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("30_ej4c1")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bcpkp1yvwi116"]
+[gd_scene load_steps=17 format=3 uid="uid://bcpkp1yvwi116"]
 
 [ext_resource type="Texture2D" uid="uid://bawoaxnmwnsy2" path="res://Assets/Sprites/SuspectCardShadow.png" id="1_pka5j"]
 [ext_resource type="Script" path="res://Assets/Scenes/Cards/SuspectCard.cs" id="1_vric6"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://jnglw2q8e4h8" path="res://Assets/Sprites/GuySkinny.png" id="10_hl72e"]
 [ext_resource type="Texture2D" uid="uid://dh7bsqqt6pv0g" path="res://Assets/Sprites/Hat.png" id="11_b43fw"]
 [ext_resource type="Texture2D" uid="uid://tyj85qfwiibq" path="res://Assets/Sprites/GuyFat.png" id="12_wy6ha"]
+[ext_resource type="Texture2D" uid="uid://cdqandl0qbj1t" path="res://Assets/Sprites/Glasses.png" id="14_aq6eu"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_iplvd"]
 
@@ -261,6 +262,15 @@ offset_right = 92.0
 offset_bottom = 26.0
 scale = Vector2(-1, 1)
 texture = ExtResource("11_b43fw")
+
+[node name="Glasses" type="TextureRect" parent="Card/MugShotContainer/MugshotField"]
+visible = false
+layout_mode = 0
+offset_left = 11.0
+offset_top = 21.0
+offset_right = 61.0
+offset_bottom = 35.0
+texture = ExtResource("14_aq6eu")
 
 [node name="Footnote" type="Label" parent="Card"]
 texture_filter = 1

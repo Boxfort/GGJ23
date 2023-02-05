@@ -8,6 +8,10 @@ public partial class GameHandler : CanvasLayer
     TimeLimit timeLimit;
     CardGenerator cardGenerator;
 
+    AudioStreamPlayer successAudio;
+    AudioStreamPlayer goodAudio;
+    AudioStreamPlayer failAudio;
+
     int correctConvictions = 0;
     int wrongfulConviction = 0;
     int innocenceProved = 0;
@@ -22,6 +26,10 @@ public partial class GameHandler : CanvasLayer
         points = GetNode<PointCounter>("Points");
         timeLimit = GetNode<TimeLimit>("TimeLimit");
         cardGenerator = GetNode<CardGenerator>("Cards");
+
+        successAudio = GetNode<AudioStreamPlayer>("SuccessAudio");
+        goodAudio = GetNode<AudioStreamPlayer>("GoodAudio");
+        failAudio = GetNode<AudioStreamPlayer>("FailAudio");
 
         outbox.SuspectSent += OnSuspectSent;
         timeLimit.TimeLimitReached += OnTimeLimitReached;
@@ -44,6 +52,7 @@ public partial class GameHandler : CanvasLayer
             // Successful conviction
             points.IncrementPoints(10000);
             timeLimit.IncrementTimer(30);
+            successAudio.Play();
 
             correctConvictions += 1;
 
@@ -54,6 +63,7 @@ public partial class GameHandler : CanvasLayer
             // Wrongful conviction
             points.IncrementPoints(-5000);
             timeLimit.IncrementTimer(-15);
+            failAudio.Play();
 
             wrongfulConviction += 1;
 
@@ -64,6 +74,7 @@ public partial class GameHandler : CanvasLayer
             // Innocent
             points.IncrementPoints(1000);
             timeLimit.IncrementTimer(5);
+            goodAudio.Play();
 
             innocenceProved += 1;
         }
@@ -72,6 +83,7 @@ public partial class GameHandler : CanvasLayer
             // Let the suspect go
             points.IncrementPoints(-5000);
             timeLimit.IncrementTimer(-15);
+            failAudio.Play();
 
             criminalsReleased += 1;
         }

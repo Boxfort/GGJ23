@@ -26,6 +26,7 @@ public enum Trait
     Young,
     MiddleAge,
     HasHat,
+    HasGlasses,
     Athletic
 }
 

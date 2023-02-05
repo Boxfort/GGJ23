@@ -35,8 +35,11 @@ public partial class Outbox : Control
         Position = inPosition;
 
         CardGenerator cardGenerator = GetNode<CardGenerator>("../Cards");
-        cardGenerator.OutboxCardCreated += OnCardCreated;
+        cardGenerator.NewCardsCreated += OnCardsCreated;
+    }
 
+    private void OnCardsCreated()
+    {
         foreach (Node n in GetTree().GetNodesInGroup("outbox_card"))
         {
             if (n is DraggableCard card)
@@ -48,11 +51,6 @@ public partial class Outbox : Control
                 GD.PrintErr("Node " + n.GetPath() + " is in group 'outbox_card' but is not type 'DraggableCard', ignoring...");
             }
         }
-    }
-
-    private void OnCardCreated(DraggableCard card)
-    {
-        card.CardDropped += OnCardDropped;
     }
 
     private void OnCardDropped(DraggableCard card, Vector2 atPosition)

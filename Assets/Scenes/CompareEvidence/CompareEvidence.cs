@@ -42,6 +42,14 @@ public partial class CompareEvidence : Control
         typingAudio = GetNode<AudioStreamPlayer>("TypingAudio");
         dingAudio = GetNode<AudioStreamPlayer>("DingAudio");
 
+        CardGenerator cardGenerator = GetNode<CardGenerator>("../Cards");
+        cardGenerator.NewCardsCreated += OnCardsCreated;
+
+        OnCardsCreated();
+    }
+
+    private void OnCardsCreated()
+    {
         // Setup signals from every bit of evidence
         foreach (Node n in GetTree().GetNodesInGroup("evidence"))
         {

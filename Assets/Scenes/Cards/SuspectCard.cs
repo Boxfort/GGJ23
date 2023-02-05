@@ -19,6 +19,7 @@ public partial class SuspectCard : DraggableCard
     Control average;
     Control fat;
     Control hat;
+    Control glasses;
 
     public bool isGuilty = false;
 
@@ -37,6 +38,7 @@ public partial class SuspectCard : DraggableCard
         average = mugshotField.GetNode<Control>("MugShot");
         fat = mugshotField.GetNode<Control>("MugShotFat");
         hat = mugshotField.GetNode<Control>("Hat");
+        glasses = mugshotField.GetNode<Control>("Glasses");
     }
 
     public void SetInfo(SuspectInfo info)
@@ -47,11 +49,8 @@ public partial class SuspectCard : DraggableCard
         dobValue.Text = String.Format("{0}-{1}-{2}", info.dob.Day.ToString("D2"), info.dob.Month.ToString("D2"), info.dob.Year.ToString("D4"));
         heightValue.Text = String.Format("{0}cm", info.height.ToString("D3"));
 
-        GD.Print(Name);
         foreach (Clue c in info.appearance)
         {
-            GD.Print(string.Join(",", c.traits));
-
             if (c.traits.Intersect(new List<Trait> { Trait.Tall, Trait.AverageHeight, Trait.Short }).Any())
             {
                 heightValue.clue = c;
@@ -60,11 +59,16 @@ public partial class SuspectCard : DraggableCard
             {
                 dobValue.clue = c;
             }
-            else if (c.traits.Intersect(new List<Trait> { Trait.Skinny, Trait.AverageWeight, Trait.Fat, Trait.HasHat }).Any())
+            else if (c.traits.Intersect(new List<Trait> { Trait.Skinny, Trait.AverageWeight, Trait.Fat, Trait.HasHat, Trait.HasGlasses }).Any())
             {
                 if (c.traits.Contains(Trait.HasHat))
                 {
                     hat.Show();
+                }
+
+                if (c.traits.Contains(Trait.HasGlasses))
+                {
+                    glasses.Show();
                 }
 
                 if (c.traits.Contains(Trait.Skinny))

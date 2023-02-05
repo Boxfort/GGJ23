@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 public partial class CardGenerator : Control
 {
     [Signal]
-    public delegate void OutboxCardCreatedEventHandler(DraggableCard card);
+    public delegate void NewCardsCreatedEventHandler();
 
     [Export]
     PackedScene suspectCard;
@@ -90,6 +90,12 @@ public partial class CardGenerator : Control
                 new Clue(FieldType.Appearance, new List<Trait> { Trait.HasHat }, "the suspect was wearing a hat", true),
             }
         },
+        {
+            new Clue(FieldType.Appearance, new List<Trait> { Trait.HasGlasses }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.HasGlasses }, "the suspect was wearing glasses", true),
+            }
+        },
     };
 
     private List<Clue> GetEvidenceClues(Clue evidence)
@@ -121,6 +127,7 @@ public partial class CardGenerator : Control
     {
         // Generate a suspect
         SuspectInfo actualSuspect = GenerateSuspect();
+        actualSuspect.isGuilty = true;
 
         // Generate x clues based on suspect features
         List<Clue> suspectClues = SelectSuspectClues(actualSuspect);
@@ -128,12 +135,13 @@ public partial class CardGenerator : Control
         CreateSuspectCard(actualSuspect);
         CreateEvidenceCard(suspectClues);
 
-        // TODO: Generate some innocents
         for (int i = 0; i < 5; i++)
         {
             SuspectInfo innocentSuspect = GenerateSuspect();
             CreateSuspectCard(innocentSuspect);
         }
+
+        EmitSignal(SignalName.NewCardsCreated);
     }
 
     private void CreateSuspectCard(SuspectInfo info)
@@ -150,8 +158,6 @@ public partial class CardGenerator : Control
         var cardRotTween = GetTree().CreateTween();
         cardTween.TweenProperty(cardInstance, "position", dest, 1).SetEase(Tween.EaseType.Out).SetTrans(Tween.TransitionType.Sine);
         cardRotTween.TweenProperty(cardInstance, "rotation", 0, 0.75).SetEase(Tween.EaseType.Out).SetTrans(Tween.TransitionType.Sine);
-
-        EmitSignal(SignalName.OutboxCardCreated, cardInstance);
     }
 
     private List<Clue> SelectSuspectClues(SuspectInfo actualSuspect)
@@ -260,6 +266,14 @@ public partial class CardGenerator : Control
             info.appearance.Add(new Clue(FieldType.Appearance, new List<Trait> { Trait.HasHat }));
         }
 
+        // Glasses
+        int glasses = rng.Next(0, 2);
+
+        if (glasses == 0)
+        {
+            info.appearance.Add(new Clue(FieldType.Appearance, new List<Trait> { Trait.HasGlasses }));
+        }
+
         // -- Evidence -- 
         info.evidence.Add(evidence[0]);
 
@@ -286,15 +300,15 @@ public partial class CardGenerator : Control
     {
     }
 
-    public async void NewRound()
+    public void NewRound()
     {
-        await Task.Run(() => ClearCards());
+        ClearCards();
         GenerateCards();
     }
 
     Vector2 clearPoint = new Vector2(320, 640);
 
-    private async void ClearCards()
+    private void ClearCards()
     {
         foreach (Control c in GetChildren())
         {
@@ -309,6 +323,7 @@ public partial class CardGenerator : Control
 
     private void OnCardCleared(Control c)
     {
-        c.QueueFree();
+        if (IsInstanceValid(c))
+            c.QueueFree();
     }
 }
