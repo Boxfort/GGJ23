@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://daireg34xclvo"]
+
+[ext_resource type="FontFile" uid="uid://l0l628yquj4x" path="res://Assets/Fonts/Kenney Future.ttf" id="1_vagps"]
+
+[resource]
+Label/colors/font_color = Color(1, 0.666667, 0.368627, 1)
+Label/colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+Label/constants/shadow_offset_x = 3
+Label/constants/shadow_offset_y = 3
+Label/fonts/font = ExtResource("1_vagps")

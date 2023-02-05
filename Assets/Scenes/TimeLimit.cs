@@ -10,12 +10,14 @@ public partial class TimeLimit : Control
 
     Timer timer;
     Label label;
+    PopupLabel timePopup;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         label = GetNode<Label>("Label");
         timer = GetNode<Timer>("Timer");
+        timePopup = GetNode<PopupLabel>("TimePopup");
 
         timer.Timeout += OnTimerTimeout;
     }
@@ -29,12 +31,16 @@ public partial class TimeLimit : Control
             timer.Stop();
         }
 
+        SessionStats.time += 1;
         timeLeft--;
         label.Text = String.Format("{0}:{1}", Mathf.FloorToInt(timeLeft / 60).ToString("D2"), (timeLeft - (Mathf.FloorToInt(timeLeft / 60) * 60)).ToString("D2"));
     }
 
     public void IncrementTimer(int seconds)
     {
+        var sign = seconds > 0 ? "+" : "";
+        timePopup.Popup(sign + seconds);
+
         timeLeft += seconds;
         label.Text = String.Format("{0}:{1}", Mathf.FloorToInt(timeLeft / 60).ToString("D2"), (timeLeft - (Mathf.FloorToInt(timeLeft / 60) * 60)).ToString("D2"));
     }

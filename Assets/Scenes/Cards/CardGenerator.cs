@@ -18,6 +18,22 @@ public partial class CardGenerator : Control
 
     Outbox outbox;
 
+    List<String> firstNames = new List<String>();
+    List<String> surnames = new List<String>();
+
+    private List<String> LoadTextFromFile(String filename)
+    {
+        FileAccess file = FileAccess.Open(filename, FileAccess.ModeFlags.Read);
+        List<String> lines = new List<String>();
+
+        while (file.GetPosition() < file.GetLength())
+        {
+            lines.Add(file.GetLine());
+        }
+
+        return lines;
+    }
+
     private List<Clue> evidence = new List<Clue>
     {
         new Clue(FieldType.Evidence, new List<Trait> { Trait.Athletic }, "is athletic" )
@@ -116,6 +132,9 @@ public partial class CardGenerator : Control
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        firstNames = LoadTextFromFile("res://Data/firstnames.txt");
+        surnames = LoadTextFromFile("res://Data/surnames.txt");
+
         GenerateCards();
     }
 
@@ -200,7 +219,9 @@ public partial class CardGenerator : Control
         SuspectInfo info = new SuspectInfo();
 
         // TODO: Generate a name
-        info.name = "John Doe";
+        var firstName = firstNames[rng.Next(0, firstNames.Count)];
+        var lastName = surnames[rng.Next(0, surnames.Count)];
+        info.name = firstName + " " + lastName;
 
         // --- HEIGHT ---
         info.height = rng.Next(130, 200);

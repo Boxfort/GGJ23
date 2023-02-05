@@ -96,6 +96,7 @@ mouse_filter = 1
 theme = ExtResource("6_ubfd6")
 text = "John Doe"
 autowrap_mode = 3
+clip_text = true
 script = ExtResource("7_3cdrq")
 
 [node name="Name_underline" type="Label" parent="Card"]

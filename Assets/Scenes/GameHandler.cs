@@ -7,6 +7,7 @@ public partial class GameHandler : CanvasLayer
     PointCounter points;
     TimeLimit timeLimit;
     CardGenerator cardGenerator;
+    PopupLabel popupLabel;
 
     AudioStreamPlayer successAudio;
     AudioStreamPlayer goodAudio;
@@ -27,17 +28,21 @@ public partial class GameHandler : CanvasLayer
         timeLimit = GetNode<TimeLimit>("TimeLimit");
         cardGenerator = GetNode<CardGenerator>("Cards");
 
+        popupLabel = GetNode<PopupLabel>("PopupLabel");
+
         successAudio = GetNode<AudioStreamPlayer>("SuccessAudio");
         goodAudio = GetNode<AudioStreamPlayer>("GoodAudio");
         failAudio = GetNode<AudioStreamPlayer>("FailAudio");
 
         outbox.SuspectSent += OnSuspectSent;
         timeLimit.TimeLimitReached += OnTimeLimitReached;
+
+        SessionStats.Reset();
     }
 
     private void OnTimeLimitReached()
     {
-        // TODO: End the game
+        GetTree().ChangeSceneToFile("res://Assets/Scenes/EndScreen.tscn");
     }
 
     private void BeginNewRound()
@@ -54,7 +59,10 @@ public partial class GameHandler : CanvasLayer
             timeLimit.IncrementTimer(30);
             successAudio.Play();
 
+            SessionStats.criminalsCaught += 1;
             correctConvictions += 1;
+
+            popupLabel.Popup("Criminal Convicted!");
 
             BeginNewRound();
         }
@@ -65,7 +73,10 @@ public partial class GameHandler : CanvasLayer
             timeLimit.IncrementTimer(-15);
             failAudio.Play();
 
+            SessionStats.innocentsConvicted += 1;
             wrongfulConviction += 1;
+
+            popupLabel.Popup("Wrongful Conviction.");
 
             BeginNewRound();
         }
@@ -76,7 +87,10 @@ public partial class GameHandler : CanvasLayer
             timeLimit.IncrementTimer(5);
             goodAudio.Play();
 
+            SessionStats.innocentsReleased += 1;
             innocenceProved += 1;
+
+            popupLabel.Popup("Innocent Released!");
         }
         else
         {
@@ -85,7 +99,10 @@ public partial class GameHandler : CanvasLayer
             timeLimit.IncrementTimer(-15);
             failAudio.Play();
 
+            SessionStats.criminalsReleased += 1;
             criminalsReleased += 1;
+
+            popupLabel.Popup("Criminal Released.");
         }
     }
 

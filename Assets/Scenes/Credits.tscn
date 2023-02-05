@@ -1,0 +1,260 @@
+[gd_scene load_steps=11 format=3 uid="uid://bubefh2ey78lg"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/Credits.cs" id="1_ye5he"]
+[ext_resource type="FontFile" uid="uid://b334hphehsd8" path="res://Assets/Fonts/Kenney Rocket.ttf" id="2_ai1ls"]
+[ext_resource type="Texture2D" uid="uid://bl41sdlerh5ln" path="res://Assets/Sprites/Background.png" id="2_tvomh"]
+[ext_resource type="FontFile" uid="uid://c8638mrrl5n71" path="res://Assets/Fonts/Kaph-Regular.ttf" id="4_nrq2e"]
+[ext_resource type="Script" path="res://Assets/Scenes/MenuOption.cs" id="5_554sb"]
+[ext_resource type="AudioStream" uid="uid://bqtdfdbnaloke" path="res://Assets/Sounds/411611__lamamakesmusic__ui_plop_simple.wav" id="6_03vas"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijj08"]
+bg_color = Color(0.552941, 0.411765, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s638"]
+bg_color = Color(0.552941, 0.411765, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4gjs"]
+bg_color = Color(1, 0.92549, 0.839216, 1)
+
+[sub_resource type="Theme" id="Theme_17ndd"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_ijj08")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_8s638")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_k4gjs")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_ye5he")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tvomh")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 47.0
+offset_right = -18.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_17ndd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CreatedIn48Hrs" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Created in 48 Hours for Global Game Jam 2023"
+horizontal_alignment = 1
+
+[node name="Space" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+horizontal_alignment = 1
+
+[node name="JackCredit" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Programming, Art, Design - Jack Anderson (Boxfort)"
+horizontal_alignment = 1
+
+[node name="Space2" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+horizontal_alignment = 1
+
+[node name="Space3" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+horizontal_alignment = 1
+
+[node name="Assets Used" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+theme_override_font_sizes/font_size = 22
+text = "Assets Used"
+horizontal_alignment = 1
+
+[node name="Space4" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+horizontal_alignment = 1
+
+[node name="Credit1" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Stamp.wav
+https://freesound.org/people/tom_woysky/sounds/348316/ 
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit2" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Drawer
+https://freesound.org/people/marcusgar/sounds/360949/"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit3" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "paper flip 3.wav
+https://freesound.org/people/gynation/sounds/82379/
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit4" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Typewriter ding_near_mono.wav
+https://freesound.org/people/_stubb/sounds/406243/
+
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit5" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "typewriter_type.wav
+https://freesound.org/people/tjandrasounds/sounds/201590/"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit6" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Success.wav
+https://freesound.org/people/Sjonas88/sounds/538554/
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit7" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Powerup/success.wav
+https://freesound.org/people/GabrielAraujo/sounds/242501/"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit8" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Retro You Lose SFX
+https://freesound.org/people/suntemple/sounds/253174/"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit9" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Kaph Font
+https://ggbot.itch.io/kaph-font"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit10" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Kaph Font
+https://ggbot.itch.io/kaph-font"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit11" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "UI_Plop_Simple
+https://freesound.org/people/LamaMakesMusic/sounds/411611/"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit12" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Kenney Fonts
+https://kenney.nl/assets/kenney-fonts"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credit13" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Office Ambience.wav
+https://freesound.org/people/DiArchangeli/sounds/108695/ "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Label" parent="."]
+texture_filter = 1
+offset_top = 545.0
+offset_right = 800.0
+offset_bottom = 585.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.815686, 0.505882, 0.34902, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("4_nrq2e")
+theme_override_font_sizes/font_size = 32
+text = "Back
+"
+horizontal_alignment = 1
+script = ExtResource("5_554sb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Back"]
+stream = ExtResource("6_03vas")
+volume_db = -5.0
