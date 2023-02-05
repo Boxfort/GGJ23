@@ -6,7 +6,7 @@ public partial class TimeLimit : Control
     [Signal]
     public delegate void TimeLimitReachedEventHandler();
 
-    int timeLeft = 300;
+    int timeLeft = 120;
 
     Timer timer;
     Label label;

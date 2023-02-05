@@ -102,6 +102,7 @@ public partial class GameHandler : CanvasLayer
             SessionStats.criminalsReleased += 1;
             criminalsReleased += 1;
 
+            BeginNewRound();
             popupLabel.Popup("Criminal Released.");
         }
     }

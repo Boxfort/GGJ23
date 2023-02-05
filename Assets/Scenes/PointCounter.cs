@@ -22,6 +22,7 @@ public partial class PointCounter : Control
 
         points += val;
         label.Text = points.ToString("D9");
+        SessionStats.score = points;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
