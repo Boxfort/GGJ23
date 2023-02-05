@@ -37,6 +37,8 @@ public enum Trait
     ShortTemper,
     Relaxed,
     Calculating,
+    Foreign,
+    Stylish
 }
 
 public class Clue

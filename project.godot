@@ -10,8 +10,10 @@ config_version=5
 
 [application]
 
-config/name="GGJ23"
-config/features=PackedStringArray("4.0", "C#", "Forward Plus")
+config/name="The Oak Agency"
+run/main_scene="res://Assets/Scenes/TitleScreen.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+run/max_fps=144
 config/icon="res://icon.svg"
 
 [display]

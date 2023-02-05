@@ -11,10 +11,12 @@ public partial class TimeLimit : Control
     Timer timer;
     Label label;
     PopupLabel timePopup;
+    AudioStreamPlayer ticking;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        ticking = GetNode<AudioStreamPlayer>("TickingTimer");
         label = GetNode<Label>("Label");
         timer = GetNode<Timer>("Timer");
         timePopup = GetNode<PopupLabel>("TimePopup");
@@ -29,6 +31,16 @@ public partial class TimeLimit : Control
             EmitSignal(SignalName.TimeLimitReached);
             timer.Autostart = false;
             timer.Stop();
+        }
+
+        if (timeLeft <= 45 && !ticking.Playing)
+        {
+            ticking.Play();
+        }
+
+        if (timeLeft > 45 && ticking.Playing)
+        {
+            ticking.Stop();
         }
 
         SessionStats.time += 1;

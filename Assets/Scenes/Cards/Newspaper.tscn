@@ -101,7 +101,7 @@ offset_bottom = 214.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.815686, 0.505882, 0.34902, 1)
 theme_override_fonts/font = ExtResource("6_ulsjh")
-text = "A thief has made off with 293 kilos of confectionary after a daring ram raid on a local sweet shop. The suspect was seen with a large sack scooping up bon-bons and other sugary snacks. Local dentists have praised the move as 'Radical' and a much needed blow to  the sugar industry. Police condemn the statements of the dentists and..."
+text = "Restaurant chain OFC has reported that someone has made off with thier secret blend of 48 herbs and spices. A man was seen exiting the building clutching a bundle of papers, and a 16 piece bucket of chicken. Owner, Colonel Jeffery, pleaded with the thief in his statement: \"Please don't get greasy fingerprints all over my fathers recipe sheet\". The suspect... "
 autowrap_mode = 3
 clip_text = true
 

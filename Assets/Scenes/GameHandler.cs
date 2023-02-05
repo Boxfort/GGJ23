@@ -56,7 +56,7 @@ public partial class GameHandler : CanvasLayer
         {
             // Successful conviction
             points.IncrementPoints(10000);
-            timeLimit.IncrementTimer(30);
+            timeLimit.IncrementTimer(20);
             successAudio.Play();
 
             SessionStats.criminalsCaught += 1;

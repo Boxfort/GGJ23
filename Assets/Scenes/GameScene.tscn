@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dovq6v04t5x5d"]
+[gd_scene load_steps=37 format=3 uid="uid://dovq6v04t5x5d"]
 
 [ext_resource type="PackedScene" uid="uid://bcpkp1yvwi116" path="res://Assets/Scenes/Cards/SuspectCard.tscn" id="1_7ssd4"]
 [ext_resource type="Script" path="res://Assets/Scenes/GameHandler.cs" id="1_cqjm3"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://jqfwrs8k3s0n" path="res://Assets/Sounds/242501__gabrielaraujo__powerupsuccess.wav" id="28_m0m88"]
 [ext_resource type="AudioStream" uid="uid://db7meulw2pgg6" path="res://Assets/Sounds/538554__sjonas88__success.wav" id="29_tk42j"]
 [ext_resource type="AudioStream" uid="uid://be1k3u3v230bb" path="res://Assets/Sounds/253174__suntemple__retro-you-lose-sfx.wav" id="30_ej4c1"]
+[ext_resource type="AudioStream" uid="uid://gqidxy3wpeks" path="res://Assets/Sounds/444568__parkersenk__ticking-timer.wav" id="30_spv8v"]
 [ext_resource type="Script" path="res://Assets/Scenes/PopupLabel.cs" id="31_6er4m"]
 [ext_resource type="AudioStream" uid="uid://b8vec2ssp1lkf" path="res://Assets/Sounds/108695__diarchangeli__office-ambience.wav" id="31_h17ro"]
 
@@ -89,10 +90,12 @@ texture = ExtResource("17_rvqme")
 
 [node name="DrawerOpenAudio" type="AudioStreamPlayer" parent="CanvasLayer/Outbox"]
 stream = ExtResource("11_eg1bs")
+volume_db = 5.0
 pitch_scale = 1.25
 
 [node name="DrawerCloseAudio" type="AudioStreamPlayer" parent="CanvasLayer/Outbox"]
 stream = ExtResource("11_eg1bs")
+volume_db = 5.0
 
 [node name="InterrogateBox" type="Control" parent="CanvasLayer"]
 visible = false
@@ -214,10 +217,12 @@ pitch_scale = 0.8
 
 [node name="DrawerOpenAudio" type="AudioStreamPlayer" parent="CanvasLayer/Stamps"]
 stream = ExtResource("11_eg1bs")
+volume_db = 5.0
 pitch_scale = 1.25
 
 [node name="DrawerCloseAudio" type="AudioStreamPlayer" parent="CanvasLayer/Stamps"]
 stream = ExtResource("11_eg1bs")
+volume_db = 5.0
 
 [node name="CompareEvidence" type="Control" parent="CanvasLayer"]
 z_index = 2
@@ -430,6 +435,9 @@ theme_override_fonts/font = ExtResource("21_bfi0r")
 text = "05:00"
 metadata/_edit_use_anchors_ = true
 
+[node name="TickingTimer" type="AudioStreamPlayer" parent="CanvasLayer/TimeLimit"]
+stream = ExtResource("30_spv8v")
+
 [node name="Points" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
@@ -506,5 +514,5 @@ script = ExtResource("31_6er4m")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_h17ro")
-volume_db = -5.0
+volume_db = -15.0
 autoplay = true

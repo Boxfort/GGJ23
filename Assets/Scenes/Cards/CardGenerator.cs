@@ -48,7 +48,9 @@ public partial class CardGenerator : Control
         new Clue(FieldType.Evidence, new List<Trait> { Trait.Evil }, "has an evil nature" ),
         new Clue(FieldType.Evidence, new List<Trait> { Trait.Relaxed }, "takes things at a relaxed pace" ),
         new Clue(FieldType.Evidence, new List<Trait> { Trait.ShortTemper }, "has a short temper" ),
-        new Clue(FieldType.Evidence, new List<Trait> { Trait.Calculating }, "is cold and calculating" )
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Calculating }, "is cold and calculating" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Foreign }, "has dual nationality" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Stylish }, "is a fashion model" )
     };
 
     private Dictionary<Clue, List<Clue>> evidenceClues = new Dictionary<Clue, List<Clue>> {
@@ -128,56 +130,70 @@ public partial class CardGenerator : Control
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Divorced }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Divorced }, "The suspect was muttering a womans name", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Divorced }, "The suspect was muttering a womans name", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Depressed }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Depressed }, "The suspect was seen crying", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Depressed }, "The suspect was seen crying", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Quiet }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Quiet }, "The suspect would not make eye contact", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Quiet }, "The suspect would not make eye contact", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Sick }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Sick }, "The suspect was sneezing heavily", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Sick }, "The suspect was sneezing heavily", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Injured }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Injured }, "The suspect was injured during the crime", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Injured }, "The suspect was injured during the crime", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Evil }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Evil }, "The suspect had a crazed look in his eye", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Evil }, "The suspect had a crazed look in his eye", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.ShortTemper }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.ShortTemper }, "The suspect seemed furious", true),
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.ShortTemper }, "The suspect snapped at onlookers", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.ShortTemper }, "The suspect seemed furious", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.ShortTemper }, "The suspect snapped at onlookers", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Relaxed }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Relaxed }, "The suspect made no effort to escape quickly", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Relaxed }, "The suspect made no effort to escape quickly", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Calculating }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Calculating }, "The suspect had prepared thoroughly", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Calculating }, "The suspect had prepared thoroughly", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Foreign }),
+            new List<Clue>() {
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Foreign}, "The suspect spoke in a foreign language", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Foreign}, "Witnesses did not recognise the language the suspect spoke", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Stylish }),
+            new List<Clue>() {
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Stylish }, "Witnesses said the suspect was very stylish", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Stylish }, "The suspect was wearing beautiful clothes", true),
             }
         },
     };

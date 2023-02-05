@@ -238,6 +238,16 @@ https://freesound.org/people/DiArchangeli/sounds/108695/ "
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="Credit14" type="Label" parent="Background/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
+theme_override_fonts/font = ExtResource("2_ai1ls")
+text = "Ticking Timer
+https://freesound.org/people/parkersenk/sounds/444568/"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Back" type="Label" parent="."]
 texture_filter = 1
 offset_top = 545.0

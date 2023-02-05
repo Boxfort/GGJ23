@@ -9,3 +9,4 @@ https://freesound.org/people/suntemple/sounds/253174/ - failure noise
 https://ggbot.itch.io/kaph-font - title font
 https://freesound.org/people/DiArchangeli/sounds/108695/ - office ambience
 https://freesound.org/people/LamaMakesMusic/sounds/411611/ - ui pop
+https://freesound.org/people/parkersenk/sounds/444568/ - ticking timer
