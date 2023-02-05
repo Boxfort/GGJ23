@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgx6jg2jjcj4p"]
+
+[ext_resource type="Theme" uid="uid://cxw5o8t1ydbli" path="res://Assets/Themes/TextValueTheme.tres" id="1_yf6ra"]
+[ext_resource type="Script" path="res://Assets/Scenes/Cards/SelectableField.cs" id="2_01dc6"]
+
+[node name="EvidenceEntry" type="Label" groups=["evidence"]]
+texture_filter = 1
+mouse_filter = 1
+theme = ExtResource("1_yf6ra")
+text = "- Suspect seen with a silly mustache."
+autowrap_mode = 3
+script = ExtResource("2_01dc6")

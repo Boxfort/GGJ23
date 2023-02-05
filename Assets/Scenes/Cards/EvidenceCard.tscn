@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvwamk85jwty0"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/Cards/EvidenceCard.cs" id="1_g8bb1"]
+[ext_resource type="Texture2D" uid="uid://yio8o6xu2cn5" path="res://Assets/Sprites/EvidenceCardShadow.png" id="1_x0w5j"]
+[ext_resource type="Texture2D" uid="uid://cc2beyk3omshv" path="res://Assets/Sprites/EvidenceCard.png" id="2_8l4ff"]
+[ext_resource type="PackedScene" uid="uid://dgx6jg2jjcj4p" path="res://Assets/Scenes/Cards/EvidenceEntry.tscn" id="2_h51wu"]
+[ext_resource type="FontFile" uid="uid://b334hphehsd8" path="res://Assets/Fonts/Kenney Rocket.ttf" id="3_xropp"]
+[ext_resource type="FontFile" uid="uid://bweoxhqqmn10o" path="res://Assets/Fonts/Kenney Pixel.ttf" id="4_y7doh"]
+[ext_resource type="AudioStream" uid="uid://c176qbnf7a4ba" path="res://Assets/Sounds/82379__gynation__paper-flip-3.wav" id="6_10cqm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d2164"]
+
+[node name="EvidenceCard" type="Control"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -600.0
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+script = ExtResource("1_g8bb1")
+evidenceEntry = ExtResource("2_h51wu")
+
+[node name="Shadow" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_d2164")
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 203.0
+offset_bottom = 203.0
+texture = ExtResource("1_x0w5j")
+
+[node name="Card" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_d2164")
+clip_contents = true
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("2_8l4ff")
+
+[node name="Roots Detective Agency" type="Label" parent="Card"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.666667, 0.368627, 1)
+theme_override_fonts/font = ExtResource("3_xropp")
+text = "EVIDENCE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Authorized Personel Only" type="Label" parent="Card"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 61.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.552941, 0.411765, 0.478431, 1)
+theme_override_fonts/font = ExtResource("4_y7doh")
+text = "AUTHORIZED PERSONEL ONLY"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="EvidenceContainer" type="VBoxContainer" parent="Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 43.0
+offset_right = -10.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PickupAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_10cqm")
+volume_db = -5.0
+
+[node name="PutDownAudio" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+pitch_scale = 0.85

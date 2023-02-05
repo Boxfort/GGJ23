@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://2v7e7t4l7axu"]
+
+[ext_resource type="Texture2D" uid="uid://bq305woxr84ko" path="res://Assets/Sprites/GuiltyHighlight.png" id="1_oahg5"]
+
+[node name="NotGuiltyOverlay" type="TextureRect"]
+modulate = Color(0.815686, 0.505882, 0.34902, 1)
+texture_filter = 1
+offset_right = 70.0
+offset_bottom = 40.0
+pivot_offset = Vector2(35, 20)
+texture = ExtResource("1_oahg5")
