@@ -1,39 +1,38 @@
-[gd_scene load_steps=36 format=3 uid="uid://dovq6v04t5x5d"]
+[gd_scene load_steps=35 format=3 uid="uid://2beiemhvwx2f"]
 
-[ext_resource type="PackedScene" uid="uid://bcpkp1yvwi116" path="res://Assets/Scenes/Cards/SuspectCard.tscn" id="1_7ssd4"]
-[ext_resource type="Script" path="res://Assets/Scenes/GameHandler.cs" id="1_cqjm3"]
-[ext_resource type="Texture2D" uid="uid://bl41sdlerh5ln" path="res://Assets/Sprites/Background.png" id="1_s5wxh"]
-[ext_resource type="PackedScene" uid="uid://cvwamk85jwty0" path="res://Assets/Scenes/Cards/EvidenceCard.tscn" id="2_p0lck"]
-[ext_resource type="Texture2D" uid="uid://dhn01tr4g00aj" path="res://Assets/Sprites/LeftArrow.png" id="3_ayppe"]
-[ext_resource type="Texture2D" uid="uid://c2m6dkq8bo668" path="res://Assets/Sprites/GuiltyStamp.png" id="3_ridsi"]
-[ext_resource type="Texture2D" uid="uid://b4mds7v3xvc5w" path="res://Assets/Sprites/NotGuiltyStamp.png" id="4_trthf"]
-[ext_resource type="Texture2D" uid="uid://bq305woxr84ko" path="res://Assets/Sprites/GuiltyHighlight.png" id="5_kduau"]
-[ext_resource type="Texture2D" uid="uid://vfjba2eny0lr" path="res://Assets/Sprites/NotGuiltyHighlight.png" id="6_fxy5f"]
-[ext_resource type="Script" path="res://Assets/Scenes/Cards/CardGenerator.cs" id="6_r7jwt"]
-[ext_resource type="Script" path="res://Assets/Scenes/Stamps/Stamps.cs" id="9_wsmpk"]
-[ext_resource type="AudioStream" uid="uid://w11t54145u2b" path="res://Assets/Sounds/348316__tom_woysky__stamp.wav" id="10_3g6sx"]
-[ext_resource type="PackedScene" uid="uid://b5y5v06uavt8s" path="res://Assets/Scenes/Stamps/GuiltyOverlay.tscn" id="10_boscq"]
-[ext_resource type="PackedScene" uid="uid://c8ygf7mkcdeps" path="res://Assets/Scenes/Cards/Newspaper.tscn" id="10_ht0ux"]
-[ext_resource type="AudioStream" uid="uid://jt2roanf17e5" path="res://Assets/Sounds/360949__marcusgar__drawer.wav" id="11_eg1bs"]
-[ext_resource type="Texture2D" uid="uid://c4sf6k2jgbbai" path="res://Assets/Sprites/QueryButton.png" id="11_madgu"]
-[ext_resource type="PackedScene" uid="uid://2v7e7t4l7axu" path="res://Assets/Scenes/Stamps/NotGuiltyOverlay.tscn" id="11_rvupt"]
-[ext_resource type="Script" path="res://Assets/Scenes/Outbox.cs" id="15_gygy8"]
-[ext_resource type="Texture2D" uid="uid://cfkwfch04hdta" path="res://Assets/Sprites/Outbox.png" id="15_m1en5"]
-[ext_resource type="Script" path="res://Assets/Scenes/Stamps/Stamp.cs" id="16_72sct"]
-[ext_resource type="Texture2D" uid="uid://d1e0kniaoxlrv" path="res://Assets/Sprites/UpArrow.png" id="17_rvqme"]
-[ext_resource type="Script" path="res://Assets/Scenes/CompareEvidence/CompareEvidence.cs" id="19_duwer"]
-[ext_resource type="Script" path="res://Assets/Scenes/CompareEvidence/Highlight.cs" id="20_apbn1"]
-[ext_resource type="FontFile" uid="uid://b334hphehsd8" path="res://Assets/Fonts/Kenney Rocket.ttf" id="21_bfi0r"]
-[ext_resource type="AudioStream" uid="uid://bt1gv5lp2gl3m" path="res://Assets/Sounds/201590__tjandrasounds__typewriter_type.wav" id="22_by784"]
-[ext_resource type="AudioStream" uid="uid://bn4ww0wahsfjt" path="res://Assets/Sounds/406243___stubb__typewriter-ding_near_mono.wav" id="23_des0a"]
-[ext_resource type="Script" path="res://Assets/Scenes/TimeLimit.cs" id="24_ccuqm"]
-[ext_resource type="Script" path="res://Assets/Scenes/PointCounter.cs" id="26_ksqov"]
-[ext_resource type="FontFile" uid="uid://bweoxhqqmn10o" path="res://Assets/Fonts/Kenney Pixel.ttf" id="28_37ev0"]
-[ext_resource type="AudioStream" uid="uid://jqfwrs8k3s0n" path="res://Assets/Sounds/242501__gabrielaraujo__powerupsuccess.wav" id="28_m0m88"]
-[ext_resource type="AudioStream" uid="uid://db7meulw2pgg6" path="res://Assets/Sounds/538554__sjonas88__success.wav" id="29_tk42j"]
-[ext_resource type="AudioStream" uid="uid://be1k3u3v230bb" path="res://Assets/Sounds/253174__suntemple__retro-you-lose-sfx.wav" id="30_ej4c1"]
-[ext_resource type="Script" path="res://Assets/Scenes/PopupLabel.cs" id="31_6er4m"]
-[ext_resource type="AudioStream" uid="uid://b8vec2ssp1lkf" path="res://Assets/Sounds/108695__diarchangeli__office-ambience.wav" id="31_h17ro"]
+[ext_resource type="Script" path="res://Assets/Scenes/GameHandler.cs" id="1_4ubv2"]
+[ext_resource type="Texture2D" uid="uid://bl41sdlerh5ln" path="res://Assets/Sprites/Background.png" id="2_ssgyj"]
+[ext_resource type="Script" path="res://Assets/Scenes/Outbox.cs" id="3_x47yd"]
+[ext_resource type="Texture2D" uid="uid://cfkwfch04hdta" path="res://Assets/Sprites/Outbox.png" id="4_45rlw"]
+[ext_resource type="Texture2D" uid="uid://d1e0kniaoxlrv" path="res://Assets/Sprites/UpArrow.png" id="5_d1u3f"]
+[ext_resource type="AudioStream" uid="uid://jt2roanf17e5" path="res://Assets/Sounds/360949__marcusgar__drawer.wav" id="6_07e28"]
+[ext_resource type="Script" path="res://Assets/Scenes/Cards/CardGenerator.cs" id="7_3ehb5"]
+[ext_resource type="PackedScene" uid="uid://bcpkp1yvwi116" path="res://Assets/Scenes/Cards/SuspectCard.tscn" id="8_u83hl"]
+[ext_resource type="PackedScene" uid="uid://cvwamk85jwty0" path="res://Assets/Scenes/Cards/EvidenceCard.tscn" id="9_e7amd"]
+[ext_resource type="Script" path="res://Assets/Scenes/Stamps/Stamps.cs" id="10_iwjmr"]
+[ext_resource type="PackedScene" uid="uid://b5y5v06uavt8s" path="res://Assets/Scenes/Stamps/GuiltyOverlay.tscn" id="11_eqha4"]
+[ext_resource type="PackedScene" uid="uid://2v7e7t4l7axu" path="res://Assets/Scenes/Stamps/NotGuiltyOverlay.tscn" id="12_i265p"]
+[ext_resource type="Texture2D" uid="uid://dhn01tr4g00aj" path="res://Assets/Sprites/LeftArrow.png" id="13_olb53"]
+[ext_resource type="Texture2D" uid="uid://bq305woxr84ko" path="res://Assets/Sprites/GuiltyHighlight.png" id="14_6laas"]
+[ext_resource type="Texture2D" uid="uid://vfjba2eny0lr" path="res://Assets/Sprites/NotGuiltyHighlight.png" id="15_54n1r"]
+[ext_resource type="Texture2D" uid="uid://c2m6dkq8bo668" path="res://Assets/Sprites/GuiltyStamp.png" id="16_iqhs8"]
+[ext_resource type="Script" path="res://Assets/Scenes/Stamps/Stamp.cs" id="17_k8il2"]
+[ext_resource type="AudioStream" uid="uid://w11t54145u2b" path="res://Assets/Sounds/348316__tom_woysky__stamp.wav" id="18_5g36u"]
+[ext_resource type="Texture2D" uid="uid://b4mds7v3xvc5w" path="res://Assets/Sprites/NotGuiltyStamp.png" id="19_kpqrx"]
+[ext_resource type="Script" path="res://Assets/Scenes/CompareEvidence/CompareEvidence.cs" id="20_wxavm"]
+[ext_resource type="Script" path="res://Assets/Scenes/CompareEvidence/Highlight.cs" id="21_nyxcb"]
+[ext_resource type="Texture2D" uid="uid://c4sf6k2jgbbai" path="res://Assets/Sprites/QueryButton.png" id="22_1lgyn"]
+[ext_resource type="FontFile" uid="uid://b334hphehsd8" path="res://Assets/Fonts/Kenney Rocket.ttf" id="23_g4bw8"]
+[ext_resource type="AudioStream" uid="uid://bt1gv5lp2gl3m" path="res://Assets/Sounds/201590__tjandrasounds__typewriter_type.wav" id="24_4upen"]
+[ext_resource type="AudioStream" uid="uid://bn4ww0wahsfjt" path="res://Assets/Sounds/406243___stubb__typewriter-ding_near_mono.wav" id="25_p4usp"]
+[ext_resource type="Script" path="res://Assets/Scenes/TimeLimit.cs" id="26_ik2qn"]
+[ext_resource type="FontFile" uid="uid://bweoxhqqmn10o" path="res://Assets/Fonts/Kenney Pixel.ttf" id="27_qan5y"]
+[ext_resource type="Script" path="res://Assets/Scenes/PopupLabel.cs" id="28_mcr8p"]
+[ext_resource type="Script" path="res://Assets/Scenes/PointCounter.cs" id="29_5u0hk"]
+[ext_resource type="AudioStream" uid="uid://jqfwrs8k3s0n" path="res://Assets/Sounds/242501__gabrielaraujo__powerupsuccess.wav" id="30_obxyi"]
+[ext_resource type="AudioStream" uid="uid://db7meulw2pgg6" path="res://Assets/Sounds/538554__sjonas88__success.wav" id="31_ywfcp"]
+[ext_resource type="AudioStream" uid="uid://be1k3u3v230bb" path="res://Assets/Sounds/253174__suntemple__retro-you-lose-sfx.wav" id="32_ecktw"]
+[ext_resource type="AudioStream" uid="uid://b8vec2ssp1lkf" path="res://Assets/Sounds/108695__diarchangeli__office-ambience.wav" id="33_readb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f1ng"]
 bg_color = Color(1, 1, 1, 1)
@@ -49,7 +48,7 @@ anti_aliasing = false
 metadata/_edit_horizontal_guides_ = [-37.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("1_cqjm3")
+script = ExtResource("1_4ubv2")
 
 [node name="Background" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
@@ -58,7 +57,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_s5wxh")
+texture = ExtResource("2_ssgyj")
 
 [node name="Outbox" type="Control" parent="CanvasLayer"]
 texture_filter = 1
@@ -70,14 +69,14 @@ offset_right = 292.0
 offset_bottom = 785.0
 pivot_offset = Vector2(131, 225)
 mouse_filter = 1
-script = ExtResource("15_gygy8")
+script = ExtResource("3_x47yd")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Outbox"]
 layout_mode = 0
 offset_top = 41.0
 offset_right = 261.0
 offset_bottom = 244.0
-texture = ExtResource("15_m1en5")
+texture = ExtResource("4_45rlw")
 
 [node name="Arrow" type="TextureRect" parent="CanvasLayer/Outbox"]
 layout_mode = 0
@@ -85,14 +84,14 @@ offset_left = 108.0
 offset_right = 153.0
 offset_bottom = 51.0
 mouse_default_cursor_shape = 2
-texture = ExtResource("17_rvqme")
+texture = ExtResource("5_d1u3f")
 
 [node name="DrawerOpenAudio" type="AudioStreamPlayer" parent="CanvasLayer/Outbox"]
-stream = ExtResource("11_eg1bs")
+stream = ExtResource("6_07e28")
 pitch_scale = 1.25
 
 [node name="DrawerCloseAudio" type="AudioStreamPlayer" parent="CanvasLayer/Outbox"]
-stream = ExtResource("11_eg1bs")
+stream = ExtResource("6_07e28")
 
 [node name="InterrogateBox" type="Control" parent="CanvasLayer"]
 visible = false
@@ -111,7 +110,7 @@ layout_mode = 0
 offset_top = 41.0
 offset_right = 261.0
 offset_bottom = 244.0
-texture = ExtResource("15_m1en5")
+texture = ExtResource("4_45rlw")
 
 [node name="Arrow" type="TextureRect" parent="CanvasLayer/InterrogateBox"]
 layout_mode = 0
@@ -119,23 +118,22 @@ offset_left = 108.0
 offset_right = 153.0
 offset_bottom = 51.0
 mouse_default_cursor_shape = 2
-texture = ExtResource("17_rvqme")
+texture = ExtResource("5_d1u3f")
 
 [node name="DrawerOpenAudio" type="AudioStreamPlayer" parent="CanvasLayer/InterrogateBox"]
-stream = ExtResource("11_eg1bs")
+stream = ExtResource("6_07e28")
 pitch_scale = 1.25
 
 [node name="DrawerCloseAudio" type="AudioStreamPlayer" parent="CanvasLayer/InterrogateBox"]
-stream = ExtResource("11_eg1bs")
+stream = ExtResource("6_07e28")
 
 [node name="Cards" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
-script = ExtResource("6_r7jwt")
-suspectCard = ExtResource("1_7ssd4")
-newspaper = ExtResource("10_ht0ux")
-evidenceCard = ExtResource("2_p0lck")
+script = ExtResource("7_3ehb5")
+suspectCard = ExtResource("8_u83hl")
+evidenceCard = ExtResource("9_e7amd")
 
 [node name="Stamps" type="Control" parent="CanvasLayer"]
 texture_filter = 1
@@ -146,9 +144,9 @@ offset_top = 50.0
 offset_right = 1153.0
 offset_bottom = 101.0
 mouse_filter = 1
-script = ExtResource("9_wsmpk")
-guiltyStampOverlay = ExtResource("10_boscq")
-notGuiltyStampOverlay = ExtResource("11_rvupt")
+script = ExtResource("10_iwjmr")
+guiltyStampOverlay = ExtResource("11_eqha4")
+notGuiltyStampOverlay = ExtResource("12_i265p")
 
 [node name="Arrow" type="TextureRect" parent="CanvasLayer/Stamps"]
 z_index = 1
@@ -157,7 +155,7 @@ offset_left = 1.0
 offset_right = 46.0
 offset_bottom = 51.0
 mouse_default_cursor_shape = 2
-texture = ExtResource("3_ayppe")
+texture = ExtResource("13_olb53")
 
 [node name="NotGuiltyHighlight" type="TextureRect" parent="CanvasLayer/Stamps"]
 modulate = Color(1, 1, 1, 0.501961)
@@ -169,7 +167,7 @@ offset_top = 75.0
 offset_right = 130.0
 offset_bottom = 115.0
 pivot_offset = Vector2(35, 20)
-texture = ExtResource("5_kduau")
+texture = ExtResource("14_6laas")
 
 [node name="GuiltyHighlight" type="TextureRect" parent="CanvasLayer/Stamps"]
 modulate = Color(1, 1, 1, 0.501961)
@@ -180,7 +178,7 @@ offset_top = 75.0
 offset_right = 230.0
 offset_bottom = 115.0
 pivot_offset = Vector2(35, 20)
-texture = ExtResource("6_fxy5f")
+texture = ExtResource("15_54n1r")
 
 [node name="NotGuiltyStamp" type="TextureRect" parent="CanvasLayer/Stamps"]
 z_index = 1
@@ -190,11 +188,11 @@ offset_left = 60.0
 offset_top = -30.0
 offset_right = 130.0
 offset_bottom = 75.0
-texture = ExtResource("3_ridsi")
-script = ExtResource("16_72sct")
+texture = ExtResource("16_iqhs8")
+script = ExtResource("17_k8il2")
 
 [node name="StampAudio" type="AudioStreamPlayer" parent="CanvasLayer/Stamps/NotGuiltyStamp"]
-stream = ExtResource("10_3g6sx")
+stream = ExtResource("18_5g36u")
 pitch_scale = 0.8
 
 [node name="GuiltyStamp" type="TextureRect" parent="CanvasLayer/Stamps"]
@@ -204,20 +202,20 @@ offset_left = 160.0
 offset_top = -30.0
 offset_right = 230.0
 offset_bottom = 75.0
-texture = ExtResource("4_trthf")
-script = ExtResource("16_72sct")
+texture = ExtResource("19_kpqrx")
+script = ExtResource("17_k8il2")
 stampType = 0
 
 [node name="StampAudio" type="AudioStreamPlayer" parent="CanvasLayer/Stamps/GuiltyStamp"]
-stream = ExtResource("10_3g6sx")
+stream = ExtResource("18_5g36u")
 pitch_scale = 0.8
 
 [node name="DrawerOpenAudio" type="AudioStreamPlayer" parent="CanvasLayer/Stamps"]
-stream = ExtResource("11_eg1bs")
+stream = ExtResource("6_07e28")
 pitch_scale = 1.25
 
 [node name="DrawerCloseAudio" type="AudioStreamPlayer" parent="CanvasLayer/Stamps"]
-stream = ExtResource("11_eg1bs")
+stream = ExtResource("6_07e28")
 
 [node name="CompareEvidence" type="Control" parent="CanvasLayer"]
 z_index = 2
@@ -231,7 +229,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("19_duwer")
+script = ExtResource("20_wxavm")
 
 [node name="Shadow" type="ColorRect" parent="CanvasLayer/CompareEvidence"]
 visible = false
@@ -268,7 +266,7 @@ offset_bottom = -102.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2f1ng")
-script = ExtResource("20_apbn1")
+script = ExtResource("21_nyxcb")
 
 [node name="Highlight2" type="Panel" parent="CanvasLayer/CompareEvidence/Shadow"]
 visible = false
@@ -280,7 +278,7 @@ offset_top = 233.0
 offset_right = 664.0
 offset_bottom = 259.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2f1ng")
-script = ExtResource("20_apbn1")
+script = ExtResource("21_nyxcb")
 
 [node name="Hack" type="Panel" parent="CanvasLayer/CompareEvidence/Shadow"]
 clip_children = 1
@@ -314,7 +312,7 @@ offset_left = 11.0
 offset_top = 12.0
 offset_right = 56.0
 offset_bottom = 57.0
-texture = ExtResource("11_madgu")
+texture = ExtResource("22_1lgyn")
 
 [node name="MatchLabel" type="RichTextLabel" parent="CanvasLayer/CompareEvidence"]
 visible = false
@@ -332,7 +330,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 0.666667, 0.368627, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
-theme_override_fonts/normal_font = ExtResource("21_bfi0r")
+theme_override_fonts/normal_font = ExtResource("23_g4bw8")
 bbcode_enabled = true
 text = "
 
@@ -357,7 +355,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 0.92549, 0.839216, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
-theme_override_fonts/normal_font = ExtResource("21_bfi0r")
+theme_override_fonts/normal_font = ExtResource("23_g4bw8")
 bbcode_enabled = true
 text = "
 
@@ -367,18 +365,18 @@ scroll_active = false
 visible_characters = 33
 
 [node name="TypingAudio" type="AudioStreamPlayer" parent="CanvasLayer/CompareEvidence"]
-stream = ExtResource("22_by784")
+stream = ExtResource("24_4upen")
 max_polyphony = 100
 
 [node name="DingAudio" type="AudioStreamPlayer" parent="CanvasLayer/CompareEvidence"]
-stream = ExtResource("23_des0a")
+stream = ExtResource("25_p4usp")
 
 [node name="TimeLimit" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("24_ccuqm")
+script = ExtResource("26_ik2qn")
 
 [node name="TimePopup" type="Label" parent="CanvasLayer/TimeLimit"]
 layout_mode = 1
@@ -398,11 +396,11 @@ theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("28_37ev0")
+theme_override_fonts/font = ExtResource("27_qan5y")
 text = "+10000"
 horizontal_alignment = 2
 uppercase = true
-script = ExtResource("31_6er4m")
+script = ExtResource("28_mcr8p")
 startPosition = Vector2(377, 49)
 endPosition = Vector2(377, 33)
 tweenTime = 0.5
@@ -426,7 +424,7 @@ theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("21_bfi0r")
+theme_override_fonts/font = ExtResource("23_g4bw8")
 text = "05:00"
 metadata/_edit_use_anchors_ = true
 
@@ -437,7 +435,7 @@ offset_left = 25.0
 offset_top = 10.0
 offset_right = 147.0
 offset_bottom = 43.0
-script = ExtResource("26_ksqov")
+script = ExtResource("29_5u0hk")
 
 [node name="PointPopup" type="Label" parent="CanvasLayer/Points"]
 layout_mode = 1
@@ -452,11 +450,11 @@ theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("28_37ev0")
+theme_override_fonts/font = ExtResource("27_qan5y")
 text = "+10000"
 horizontal_alignment = 2
 uppercase = true
-script = ExtResource("31_6er4m")
+script = ExtResource("28_mcr8p")
 startPosition = Vector2(0, 38)
 endPosition = Vector2(0, 23)
 tweenTime = 0.5
@@ -470,17 +468,17 @@ theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("21_bfi0r")
+theme_override_fonts/font = ExtResource("23_g4bw8")
 text = "0000000"
 
 [node name="SuccessAudio" type="AudioStreamPlayer" parent="CanvasLayer"]
-stream = ExtResource("28_m0m88")
+stream = ExtResource("30_obxyi")
 
 [node name="GoodAudio" type="AudioStreamPlayer" parent="CanvasLayer"]
-stream = ExtResource("29_tk42j")
+stream = ExtResource("31_ywfcp")
 
 [node name="FailAudio" type="AudioStreamPlayer" parent="CanvasLayer"]
-stream = ExtResource("30_ej4c1")
+stream = ExtResource("32_ecktw")
 
 [node name="PopupLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 8
@@ -499,12 +497,12 @@ theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.168627, 0.270588, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("21_bfi0r")
+theme_override_fonts/font = ExtResource("23_g4bw8")
 text = "Criminal Convicted!"
 uppercase = true
-script = ExtResource("31_6er4m")
+script = ExtResource("28_mcr8p")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("31_h17ro")
+stream = ExtResource("33_readb")
 volume_db = -5.0
 autoplay = true

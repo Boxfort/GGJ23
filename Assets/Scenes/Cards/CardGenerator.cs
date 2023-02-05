@@ -12,6 +12,9 @@ public partial class CardGenerator : Control
     PackedScene suspectCard;
 
     [Export]
+    PackedScene newspaper;
+
+    [Export]
     PackedScene evidenceCard;
 
     Random rng = new Random();
@@ -36,80 +39,145 @@ public partial class CardGenerator : Control
 
     private List<Clue> evidence = new List<Clue>
     {
-        new Clue(FieldType.Evidence, new List<Trait> { Trait.Athletic }, "is athletic" )
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Athletic }, "is a member of the athletics club" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Divorced }, "is recently divorced" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Depressed }, "is sufferring from depression" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Quiet }, "is introverted" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Sick }, "is suffering from a cold" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Injured}, "has an unexplained injury" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Evil }, "has an evil nature" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Relaxed }, "takes things at a relaxed pace" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.ShortTemper }, "has a short temper" ),
+        new Clue(FieldType.Evidence, new List<Trait> { Trait.Calculating }, "is cold and calculating" )
     };
 
     private Dictionary<Clue, List<Clue>> evidenceClues = new Dictionary<Clue, List<Clue>> {
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.Tall }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Tall }, "The suspect is tall", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Tall }, "The suspect was tall", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.Short }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Short }, "The suspect is short", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Short }, "The suspect was short", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.AverageHeight }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.AverageHeight }, "The suspect is average height", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.AverageHeight }, "The suspect was average height", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.Young }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Young }, "The suspect is young", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Young }, "The suspect was youthful", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.MiddleAge }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.MiddleAge }, "The suspect is middle aged", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.MiddleAge }, "The suspect was middle aged", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.Old }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Old }, "The suspect is old", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Old }, "The suspect appeared old", true),
             }
         },
                 {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.Skinny }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Skinny }, "The suspect is skinny", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Skinny }, "The suspect was skinny", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.AverageWeight }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.AverageWeight }, "The suspect is average weight", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.AverageWeight }, "The suspect was average weight", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.Fat }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.Fat }, "The suspect is fat", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Fat }, "The suspect was fat", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Fat }, "The suspect was overweight", true),
             }
         },
         {
             new Clue(FieldType.Evidence, new List<Trait> { Trait.Athletic }),
             new List<Clue>() {
-                new Clue(FieldType.Evidence, new List<Trait> { Trait.Athletic }, "the suspect is athletic", true),
+                new Clue(FieldType.Evidence, new List<Trait> { Trait.Athletic }, "The suspect made a swift getaway", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.HasHat }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.HasHat }, "the suspect was wearing a hat", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.HasHat }, "The suspect was wearing a hat", true),
             }
         },
         {
             new Clue(FieldType.Appearance, new List<Trait> { Trait.HasGlasses }),
             new List<Clue>() {
-                new Clue(FieldType.Appearance, new List<Trait> { Trait.HasGlasses }, "the suspect was wearing glasses", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.HasGlasses }, "The suspect was wearing glasses", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Divorced }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Divorced }, "The suspect was muttering a womans name", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Depressed }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Depressed }, "The suspect was seen crying", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Quiet }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Quiet }, "The suspect would not make eye contact", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Sick }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Sick }, "The suspect was sneezing heavily", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Injured }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Injured }, "The suspect was injured during the crime", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Evil }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Evil }, "The suspect had a crazed look in his eye", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.ShortTemper }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.ShortTemper }, "The suspect seemed furious", true),
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.ShortTemper }, "The suspect snapped at onlookers", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Relaxed }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Relaxed }, "The suspect made no effort to escape quickly", true),
+            }
+        },
+        {
+            new Clue(FieldType.Evidence, new List<Trait> { Trait.Calculating }),
+            new List<Clue>() {
+                new Clue(FieldType.Appearance, new List<Trait> { Trait.Calculating }, "The suspect had prepared thoroughly", true),
             }
         },
     };
@@ -144,6 +212,8 @@ public partial class CardGenerator : Control
 
     private void GenerateCards()
     {
+        AddNewspaper();
+
         // Generate a suspect
         SuspectInfo actualSuspect = GenerateSuspect();
         actualSuspect.isGuilty = true;
@@ -161,6 +231,19 @@ public partial class CardGenerator : Control
         }
 
         EmitSignal(SignalName.NewCardsCreated);
+    }
+
+    private void AddNewspaper()
+    {
+        Newspaper newspaperInstance = (Newspaper)newspaper.Instantiate();
+        newspaperInstance.GlobalPosition = new Vector2(596, -270);
+        newspaperInstance.RotationDegrees = rng.Next(-90, 90);
+        AddChild(newspaperInstance);
+
+        var cardTween = GetTree().CreateTween();
+        var cardRotTween = GetTree().CreateTween();
+        cardTween.TweenProperty(newspaperInstance, "position", new Vector2(430, 84), 1).SetEase(Tween.EaseType.Out).SetTrans(Tween.TransitionType.Sine);
+        cardRotTween.TweenProperty(newspaperInstance, "rotation", 0, 0.75).SetEase(Tween.EaseType.Out).SetTrans(Tween.TransitionType.Sine);
     }
 
     private void CreateSuspectCard(SuspectInfo info)
@@ -296,7 +379,22 @@ public partial class CardGenerator : Control
         }
 
         // -- Evidence -- 
-        info.evidence.Add(evidence[0]);
+        for (int i = 0; i < 3; i++)
+        {
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            while (true)
+            {
+                var selectedEvidence = evidence[rng.Next(0, evidence.Count)];
+                if (info.evidence.Contains(selectedEvidence)) continue;
+
+                info.evidence.Add(selectedEvidence);
+                break;
+            }
+        }
+
 
         return info;
     }

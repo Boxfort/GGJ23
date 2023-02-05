@@ -31,6 +31,7 @@ pivot_offset = Vector2(273.5, 10)
 script = ExtResource("3_7dcyv")
 
 [node name="Label4" type="Label" parent="Title"]
+layout_mode = 0
 offset_right = 547.0
 offset_bottom = 61.0
 theme_override_colors/font_color = Color(0.0509804, 0.168627, 0.270588, 1)
@@ -39,6 +40,7 @@ theme_override_font_sizes/font_size = 50
 text = "The Oak Agency"
 
 [node name="Label3" type="Label" parent="Title"]
+layout_mode = 0
 offset_top = -8.0
 offset_right = 547.0
 offset_bottom = 53.0
@@ -48,6 +50,7 @@ theme_override_font_sizes/font_size = 50
 text = "The Oak Agency"
 
 [node name="Label2" type="Label" parent="Title"]
+layout_mode = 0
 offset_top = -16.0
 offset_right = 547.0
 offset_bottom = 45.0
@@ -57,6 +60,7 @@ theme_override_font_sizes/font_size = 50
 text = "The Oak Agency"
 
 [node name="Label" type="Label" parent="Title"]
+layout_mode = 0
 offset_top = -24.0
 offset_right = 547.0
 offset_bottom = 37.0

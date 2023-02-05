@@ -27,7 +27,16 @@ public enum Trait
     MiddleAge,
     HasHat,
     HasGlasses,
-    Athletic
+    Athletic,
+    Depressed,
+    Divorced,
+    Quiet,
+    Sick,
+    Injured,
+    Evil,
+    ShortTemper,
+    Relaxed,
+    Calculating,
 }
 
 public class Clue
